@@ -13,12 +13,10 @@ h2{
 .winner{
     height:50px;
     width:500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 3rem;
     font-style: oblique;
     text-align: center;
+    margin : 40px 0px;
 }
 .details{
     display: flex;
@@ -28,11 +26,7 @@ h2{
     height:90px;
     width: 300px;
 }
-.winner{
-    background-color: black;
-    
-    transform: translate(-50%,-50%);
-}
+
 #board{
     /* position: absolute;
     top: 50%;
