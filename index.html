@@ -7,18 +7,29 @@
     <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="board">
-        <button class="box"( onclick="place()"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
+    <div id="start" onclick="start()">start</div>
+    <div class="details">
+        <h2>Click start to play</h2>
+        <span>Player 1: X</span>
+        <span>player 2: O</span>
     </div>
+    <div id="board" style="display: none;">
+        <div class="box " id="1" onclick="place(id)"></div>
+        <div class="box" id="2" onclick="place(id)"></div>
+        <div class="box" id="3" onclick="place(id)"></div>
+        <div class="box" id="4" onclick="place(id)"></div>
+        <div class="box" id="5" onclick="place(id)"></div>
+        <div class="box" id="6" onclick="place(id)"></div>
+        <div class="box" id="7" onclick="place(id)"></div>
+        <div class="box" id="8" onclick="place(id)"></div>
+        <div class="box" id="9" onclick="place(id)"></div>
+    </div>
+    <div id="restart" onclick="reset()">restart</div>
+    <div class="winner" style="display: none;">winner</div>
+
     <script src="index.js"></script>
 </body>
+
 </html>
