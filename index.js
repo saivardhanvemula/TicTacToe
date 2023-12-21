@@ -2,6 +2,7 @@ const start = () => {
     document.getElementById("start").style.display = "none";
     document.querySelector("#board").style.display = "grid";
     document.querySelector(".details > h2").innerHTML = "Player 1 turn"
+    document.querySelector(".details > h2").innerHTML = "Player 1 turn"
 }
 let win = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 5, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [3, 5, 7]]
 let count = 0;
@@ -18,7 +19,6 @@ const place = (id) => {
             list[id] = "X";
         }
         let res = Validate()
-        console.log(res)
         if (res) {
             playing=false;
             let winner = document.querySelector(".winner");
@@ -37,7 +37,6 @@ const reset = () => {
         boxes[i].innerHTML = "";
     }
     document.querySelector(".winner").style.display = "none";
-    document.querySelector("#board").style.display = "grid";
     document.querySelector(".details > h2").innerHTML = "Player 1 turn"
     list = ["", "", "", "", "", "", "", "", ""]
     count = 0
@@ -45,7 +44,6 @@ const reset = () => {
 }
 const Validate = () => {
     for (let i = 0; i < 8; i++) {
-        console.log(win[i][0], win[i][1], win[i][2])
         if (list[win[i][0]] == "X" && list[win[i][1]] == "X" && list[win[i][2]] == "X") {
             return "X";
         } else if (list[win[i][0]] == "O" && list[win[i][1]] == "O" && list[win[i][2]] == "O") {

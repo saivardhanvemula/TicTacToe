@@ -27,22 +27,19 @@ h2{
     align-items: center;
     height:90px;
     width: 300px;
-    /* background-color: cyan; */
 }
 .winner{
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    background-color: black;
+    
     transform: translate(-50%,-50%);
 }
 #board{
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%); */
     height: 500px;
     width:500px;
-    /* background-color:rgb(0, 0, 0); */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
