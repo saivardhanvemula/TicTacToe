@@ -41,6 +41,7 @@ const reset = () => {
     document.querySelector(".details > h2").innerHTML = "Player 1 turn"
     list = ["", "", "", "", "", "", "", "", ""]
     count = 0
+    playing=true;
 }
 const Validate = () => {
     for (let i = 0; i < 8; i++) {
