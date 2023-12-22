@@ -7,7 +7,8 @@ const start = () => {
 let win = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 5, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [3, 5, 7]]
 let count = 0;
 let list = ["", "", "", "", "", "", "", "", ""]
-let playing=true;
+let playing = true;
+let winner = document.querySelector(".winner");
 const place = (id) => {
     if (!list[id] && playing) {
         let box = document.getElementById(id)
@@ -20,14 +21,17 @@ const place = (id) => {
         }
         let res = Validate()
         if (res) {
-            playing=false;
-            let winner = document.querySelector(".winner");
+            playing = false;
             console.log("player won");
             winner.style.display = "block";
             winner.innerHTML = res == "X" ? "Player 1 won" : "player 2 won";
         } else {
             document.querySelector(".details > h2").innerHTML = count % 2 == 0 ? "Player 2 turn" : "Player 1 turn"
             count = count + 1
+        }
+        if (count == 9){
+            winner.style.display = "block";
+            winner.innerHTML = "Draw"
         }
     }
 }
@@ -40,7 +44,7 @@ const reset = () => {
     document.querySelector(".details > h2").innerHTML = "Player 1 turn"
     list = ["", "", "", "", "", "", "", "", ""]
     count = 0
-    playing=true;
+    playing = true;
 }
 const Validate = () => {
     for (let i = 0; i < 8; i++) {

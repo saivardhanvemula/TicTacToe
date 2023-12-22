@@ -2,7 +2,7 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    /* background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); */
 }
 #start,#restart{
     cursor:pointer;
@@ -16,7 +16,7 @@ h2{
     font-size: 3rem;
     font-style: oblique;
     text-align: center;
-    margin : 40px 0px;
+    margin : 20px 0px;
 }
 .details{
     display: flex;
@@ -28,10 +28,12 @@ h2{
 }
 
 #board{
+    background-image: url(./board.jpg);
     /* position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%); */
+    margin: 60px 0px;
     height: 500px;
     width:500px;
     display: grid;
@@ -40,7 +42,7 @@ h2{
 }
 .box{
     margin: 2px;
-    background-color: rgb(20, 216, 255);
+    /* background-color: rgb(20, 216, 255); */
     display: flex;
     justify-content: center;
     align-items: center;
