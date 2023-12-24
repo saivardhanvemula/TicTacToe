@@ -31,11 +31,11 @@ const place = (id) => {
             console.log("player won");
             winner.style.display = "block";
             if (res == "X") {
-                winner.innerHTML = res = "Player 1 won";
+                winner.innerHTML = "Player 1 won";
                 p1 = p1 + 1
             }
             else {
-                winner.innerHTML = res = "Player 2 won";
+                winner.innerHTML =  "Player 2 won";
                 p2 = p2 + 1
             }
             updateScore()
@@ -83,4 +83,7 @@ const updateScore = () => {
     details.innerHTML = `<h2>Click start to play</h2>
     <span> Player 1: X Score : ${p1}</span >
     <span> player 2: O Score : ${p2}</span> `;
+}
+const reload =()=>{
+    location.reload();
 }
