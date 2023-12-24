@@ -57,6 +57,5 @@ h2{
 @media (max-width:500px) {
     #board{
         width: 100%;
-        /* height: aut; */
     }
 }
