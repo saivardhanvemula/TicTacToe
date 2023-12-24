@@ -49,10 +49,16 @@ const reset = () => {
 const Validate = () => {
     for (let i = 0; i < 8; i++) {
         if (list[win[i][0]] == "X" && list[win[i][1]] == "X" && list[win[i][2]] == "X") {
+            winline(win[i][0],win[i][1],win[i][2])
             return "X";
         } else if (list[win[i][0]] == "O" && list[win[i][1]] == "O" && list[win[i][2]] == "O") {
             return "O";
         }
     }
     return false
+}
+const winline = (id1,id2,id3)=>{
+document.getElementById(id1).classList.add("won")
+document.getElementById(id2).classList.add("won")
+document.getElementById(id3).classList.add("won")
 }
