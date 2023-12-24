@@ -39,6 +39,7 @@ const reset = () => {
     let boxes = document.getElementsByClassName("box");
     for (let i = 0; i < 9; i++) {
         boxes[i].innerHTML = "";
+        boxes[i].classList="box";
     }
     document.querySelector(".winner").style.display = "none";
     document.querySelector(".details > h2").innerHTML = "Player 1 turn"
@@ -52,6 +53,7 @@ const Validate = () => {
             winline(win[i][0],win[i][1],win[i][2])
             return "X";
         } else if (list[win[i][0]] == "O" && list[win[i][1]] == "O" && list[win[i][2]] == "O") {
+            winline(win[i][0],win[i][1],win[i][2])
             return "O";
         }
     }
