@@ -9,29 +9,25 @@
 </head>
 
 <body>
-    <h1>Tic-Tac-Toe</h1>
-    <div class="btns">
-        <div id="Single">Single Player</div>
-        <div id="Multi">Multi Player</div>
+    <div id="start" onclick="start()">start</div>
+    <div class="details">
     </div>
-    <!-- <div id="start" onclick="start()">start</div> -->
-    <div class="game">
-        <div class="details"></div>
-        <div id="board" style="display: none;">
-            <div class="box " id="1" onclick="place(id)"></div>
-            <div class="box" id="2" onclick="place(id)"></div>
-            <div class="box" id="3" onclick="place(id)"></div>
-            <div class="box" id="4" onclick="place(id)"></div>
-            <div class="box" id="5" onclick="place(id)"></div>
-            <div class="box" id="6" onclick="place(id)"></div>
-            <div class="box" id="7" onclick="place(id)"></div>
-            <div class="box" id="8" onclick="place(id)"></div>
-            <div class="box" id="9" onclick="place(id)"></div>
-        </div>
-        <div class="winner" style="display: none;">winner</div> <br>
-        <div id="restart" onclick="reset()">new board</div><br>
-        <div id="reload" onclick="reload()">Restart</div>
+    <div  id="board" style="display: none;">
+        <!-- <div class="bar"></div> -->
+        <div class="box " id="1" onclick="place(id)"></div>
+        <div class="box" id="2" onclick="place(id)"></div>
+        <div class="box" id="3" onclick="place(id)"></div>
+        <div class="box" id="4" onclick="place(id)"></div>
+        <div class="box" id="5" onclick="place(id)"></div>
+        <div class="box" id="6" onclick="place(id)"></div>
+        <div class="box" id="7" onclick="place(id)"></div>
+        <div class="box" id="8" onclick="place(id)"></div>
+        <div class="box" id="9" onclick="place(id)"></div>
     </div>
+    <div class="winner" style="display: none;">winner</div> <br>
+    <div id="restart" onclick="reset()">new board</div><br>
+    <div  id="reload" onclick="reload()">Restart</div>
+
     <script src="index.js"></script>
 </body>
 
