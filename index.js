@@ -64,6 +64,7 @@ const mplace = (id) => {
         remaining.splice(id - 1 - count, 1);
         console.log(remaining);
         let res = Validate();
+        console.log(res)
         if (res) {
             playing = false;
             winner.style.display = "block";
@@ -71,7 +72,7 @@ const mplace = (id) => {
                 winner.innerHTML = `${p1name} won`;
                 p1 = p1 + 1;
             } else {
-                winner.innerHTML = `${p1name} won`;
+                winner.innerHTML = `${p2name} won`;
                 p2 = p2 + 1;
             }
             updateScore();
@@ -85,7 +86,7 @@ const mplace = (id) => {
             winner.innerHTML = "Draw";
         }
     }
-    if (count % 2 == 1 && c && count != 9) {
+    if (count % 2 == 1 && c && count != 9 && playing) {
         console.log("cplace ");
         cplace();
     }
