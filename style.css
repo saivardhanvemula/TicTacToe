@@ -58,7 +58,11 @@ h2{
 }
 @media (max-width:500px) {
     #board{
-        width: 100%;
+        width: 400px;
+    }
+    .box{
+        height: 133.33px;
+        width: 133.33px;
     }
 }
 .game{
