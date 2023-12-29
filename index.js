@@ -55,10 +55,10 @@ const mplace = (id) => {
         console.log(id);
         let box = document.getElementById(id);
         if (count % 2 == 1) {
-            box.innerHTML = "O";
+            box.innerHTML = "<span>O</span>";
             list[id] = "O";
         } else {
-            box.innerHTML = "X";
+            box.innerHTML = "<span>X</span>";
             list[id] = "X";
         }
         remaining.splice(id - 1 - count, 1);
@@ -101,7 +101,7 @@ const cplace = () => {
         console.log("checked X");
         place = checkx;
     } else {
-        // console.log()
+        console.log("random")
         place = remaining[Math.floor(Math.random() * remaining.length)];
     }
     console.log(place);
@@ -121,6 +121,7 @@ const reset = () => {
     list = ["", "", "", "", "", "", "", "", ""];
     count = 0;
     playing = true;
+    remaining = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 };
 
 const Validate = () => {

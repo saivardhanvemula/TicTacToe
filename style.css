@@ -13,7 +13,7 @@ h2{
 }
 .winner{
     height:50px;
-    width:500px;
+    width:auto;
     font-size: 3rem;
     font-style: oblique;
     text-align: center;
@@ -40,11 +40,13 @@ h2{
 }
 .box{
     margin: 2px;
+    height: 162.66;
+    width: 162.66;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.won{
+.won>span{
     animation: winner .8s  ease-in-out forwards;
 }
 @keyframes winner {
