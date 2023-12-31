@@ -26,7 +26,6 @@ let btns = document.querySelector(".btns");
 let boxes = document.querySelectorAll(".box");
 
 game.style.display = "none";
-
 multi.addEventListener("click", () => {
     start("Player 1", "Player 2");
 });
@@ -52,7 +51,7 @@ const start = (p1n, p2n) => {
 
 const mplace = (id) => {
     if (!list[id] && playing) {
-        console.log(id);
+        // console.log(id);
         let box = document.getElementById(id);
         if (count % 2 == 1) {
             box.innerHTML = "<span>O</span>";
@@ -62,9 +61,7 @@ const mplace = (id) => {
             list[id] = "X";
         }
         remaining.splice(id - 1 - count, 1);
-        console.log(remaining);
         let res = Validate();
-        console.log(res)
         if (res) {
             playing = false;
             winner.style.display = "block";
@@ -87,7 +84,7 @@ const mplace = (id) => {
         }
     }
     if (count % 2 == 1 && c && count != 9 && playing) {
-        console.log("cplace ");
+        // console.log("cplace ");
         cplace();
     }
 };
@@ -96,16 +93,16 @@ const cplace = () => {
     checko = check("O");
     checkx = check("X");
     if (checko) {
-        console.log("checked O");
+        // console.log("checked O");
         place = checko;
     } else if (checkx) {
-        console.log("checked X");
+        // console.log("checked X");
         place = checkx;
     } else {
-        console.log("random")
+        // console.log("random")
         place = remaining[Math.floor(Math.random() * remaining.length)];
     }
-    console.log(place);
+    // console.log(place);
     setTimeout(function () {
         mplace(place);
     }, 1000);

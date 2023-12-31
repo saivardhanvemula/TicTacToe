@@ -11,7 +11,7 @@
 <body>
     <h1>Tic-Tac-Toe</h1>
     <div class="btns">
-        <div  id="Single">Play with Bot</div>
+        <div id="Single">Play with Bot</div>
         <div id="Multi">Play with friend</div>
     </div>
     <!-- <div id="start" onclick="start()">start</div> -->
@@ -31,8 +31,10 @@
             <div class="box" id="9" onclick="mplace(id)"></div>
         </div>
         <div class="winner" style="display: none;">winner</div> <br>
-        <div id="restart" onclick="reset()">new board</div><br>
-        <div id="reload" onclick="reload()">Restart</div>
+        <div class="rbtn">
+            <div id="restart" onclick="reset()">New Board</div><br>
+            <div id="reload" onclick="reload()">Restart</div>
+        </div>
     </div>
     <script src="index.js"></script>
 </body>

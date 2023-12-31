@@ -1,84 +1,84 @@
-body{
+body {
     display: flex;
     align-items: center;
     flex-direction: column;
     height: auto;
+    width: auto;
     /* background : linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); */
 }
-#start,#restart,#reload{
-    cursor:pointer;
+#start,
+#restart,
+#reload {
+    cursor: pointer;
 }
-h2{
+h2 {
     margin: 0;
 }
-.winner{
-    height:50px;
-    width:auto;
+.winner {
+    height: 50px;
+    width: auto;
     font-size: 3rem;
     font-style: oblique;
     text-align: center;
-    margin : 20px 30px;
+    margin: 20px 30px;
 }
-.details{
+.details {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height:90px;
+    height: 90px;
     width: 300px;
 }
+.details > h2 {
+    font-size: 1.75rem;
+}
 
-#board{
-    background-image: url(./board.jpg) ;
+#board {
+    background-image: url(./board.jpg);
     background-size: 100%;
+    /* object-fit: fill; */
     margin: 60px 40px;
-    width:500px;
+    width: 500px;
+    /* padding: 5px; */
     aspect-ratio: 1/1;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 }
-.box{
-    margin: 2px;
+.box {
+    /* margin: 2px; */
     height: 162.66px;
     width: 162.66px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.won>span{
-    animation: winner .8s  ease-in-out forwards;
+.won > span {
+    animation: winner 0.8s ease-in-out forwards;
 }
 @keyframes winner {
-    to{
+    to {
         scale: 3;
         color: red;
-
     }
 }
-@media (max-width:500px) {
-    #board{
-        width: 400px;
-    }
-    .box{
-        height: 133.33px;
-        width: 133.33px;
-    }
-}
-.game{
-    width: 580px;
-    height: 872px;
+.game {
+    /* width: 580px; */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.btns{
+.btns {
     height: 300px;
     display: flex;
     flex-direction: column;
-    justify-content:space-around;
+    justify-content: space-around;
 }
-#Single,#Multi{
+#Single,
+#Multi,
+#reload,
+#restart {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,9 +88,34 @@ h2{
     border-radius: 5px;
     box-shadow: 3px 3px 5px #505050;
 }
-#Single:hover,#Multi:hover{
+#Single:hover,
+#Multi:hover {
     transform: scale(1.1);
     transition: ease-in-out 150ms;
     box-shadow: 3px 3px 5px black;
     cursor: default;
+}
+.rbtn {
+    display: flex;
+}
+#reload,
+#restart {
+    scale: 0.75;
+    font-size: 1.25rem;
+}
+@media (max-width: 550px) {
+    #board {
+        width: 350px;
+        aspect-ratio: 1/1;
+    }
+    .box {
+        height: 116.6666666666667px;
+        width: 116.6666666666667px;
+    }
+    .game {
+        width: 100%;
+    }
+    .winner {
+        font-size: 1.75rem;
+    }
 }
